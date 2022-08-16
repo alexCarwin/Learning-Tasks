@@ -6,14 +6,6 @@ using UnityEngine;
 public class FirstThreeTasks : MonoBehaviour
 {
 
-    private void Start()
-    {
-        Debug.Log(EvenSum(new int[] { 1, 3, 4, 6 }));
-        Debug.Log(EvenSum(new int[] { 1, 2, 3, 3 }));
-        Debug.Log(EvenSum(new int[] { 1, 3, 1, 7 }));
-        Debug.Log(EvenSum(new int[] { }));
-    }
-
     //Написать метод, который будет принимать строку с числами, разделёнными пробелами и возвращать самое большое число. (известно, что строка с числами всегда в правильном формате)
 
     private int GetMaxNumber(string stringWithNumbers)
@@ -28,7 +20,6 @@ public class FirstThreeTasks : MonoBehaviour
                 maxValue = item;
         }
         return maxValue;
-
     }
 
 
@@ -43,6 +34,7 @@ public class FirstThreeTasks : MonoBehaviour
     {
         int[] numbers = new int[n / x + 1];
         int index = 0;
+
         for (int i = 0; i <= n;)
         {
             numbers.SetValue(i, index);
@@ -62,7 +54,6 @@ public class FirstThreeTasks : MonoBehaviour
     EvenSum(new int {  }) -> -1
     */
 
-
     private int EvenSum(int[] array)
     {
         int sumOfEvenNumbers = 0;
@@ -73,13 +64,10 @@ public class FirstThreeTasks : MonoBehaviour
                 sumOfEvenNumbers += item;
             }
         }
+
         if (sumOfEvenNumbers == 0 || array.Length == 0)
             return -1;
 
         else return sumOfEvenNumbers;
-
     }
-
-
-
 }
